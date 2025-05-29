@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">                                                              
     <link rel="stylesheet" href="{% static 'css/Inicio/index.css'%}">
     <link rel="stylesheet" href="{% static 'css/Clientes/clientes.css'%}">
+    <link rel="stylesheet" href="{% static 'css/Productos/listar.css'%}">
     <!-- <link rel="stylesheet" href="{% static 'css/productos/listar.css'%}">
     <link rel="stylesheet" href="{% static 'css/productos/agregar.css'%}">
     <link rel="stylesheet" href="{% static 'css/productos/editar.css'%}">
@@ -36,8 +37,8 @@
                                 Productos
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Ver Productos</a></li>
-                                <li><a class="dropdown-item" href="#">Nuevo Producto</a></li>
+                                <li><a class="dropdown-item" href="{% url 'listar_productos' %}">Ver Productos</a></li>
+                                <li><a class="dropdown-item" href="{% url 'agregar_productos'%}">Nuevo Producto</a></li>
                                 <li><a class="dropdown-item" href="#">Stock</a></li>
                             </ul>
                         </li>
