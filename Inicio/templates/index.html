@@ -45,10 +45,22 @@
                                 Clientes
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="#">Ver Clientes</a></li>
-                                <li><a class="dropdown-item" href="#">Nuevo Cliente</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Lista_Cliente'%}">Ver Clientes</a></li>
+                                <li><a class="dropdown-item" href="{% url 'Agregar_Cliente'%}">Nuevo Cliente</a></li>
                             </ul>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'cerrarsesion' %}">Cerrar Sesion</a>
+                        </li>
+                        {% else%}
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'iniciosesion' %}">Inicio Sesion</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="{% url 'inscribirse' %}">Registrate</a>
+                        </li>
+                        {% endif %}
                         <li class="nav-item">
                             <a class="nav-link" href="#">Servicios</a>
                         </li>
