@@ -1,0 +1,70 @@
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='lightcyan' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+body{
+    background-image: url('/static/imgs/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background: linear-gradient(135deg, #c2b99f, #dec4b5, #84676f, #404071); */
+    /* background: -webkit-linear-gradient(90deg, #1e2230,#404659,#403a3c);
+    background: linear-gradient(90deg, #1e2230,#404659,#403a3c); */
+    /*background: -webkit-linear-gradient(90deg, #567599,#1f2e4b);
+    background: linear-gradient(90deg, #567599,#1f2e4b);*/
+    color: white;
+    height: 100vh;
+    padding-top: 80px;
+}
+.h1nav{
+    color: lightcyan;
+}
+
+/* #barranav{
+    background-color:#fdf5e6;
+} */
+nav{
+    background-color:steelblue;
+    /*background:linear-gradient(to right,#fa9107,#fcde38,#fa9107);*/
+    /*background: linear-gradient(to right,#e312f3,#06def3);*/
+    /*background: -webkit-linear-gradient(90deg,#1f2e4b, #567599);
+    background: linear-gradient(90deg,#1f2e4b, #567599);*/
+    border-radius: 5px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    font-size: large;
+    padding: 15px;
+    margin: 15px;
+    justify-content: center;
+}
+nav a{
+    border: 2px transparent;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color:white;
+    background-color:steelblue;
+}
+
+.dropdown-toggle {
+    color: white!important;
+}
+
+.dropdown-menu a {
+    color: white!important;
+}
+
+.dropdown-menu a:hover {
+    color: white;
+    background-color: steelblue;
+}
