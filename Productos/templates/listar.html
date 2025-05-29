@@ -25,8 +25,8 @@
                                             <td >{{e.nombre}}</td>
                                             <td >{{e.precio}}</td>
                                             <td >{{e.descripcion}}</td>
-                                            <td ><a class="btn btn-edit" class="edit" href="{% url 'modificar_productos' e.idproducto%}" role="button">Modificar</a></td>
-                                            <td ><a class="btn btn-del" class="del" href="{% url 'eliminar_productos' e.idproducto%}" role="button">Eliminar</a></td>
+                                            <td ><a class="btn btn-warning border-dark"href="{% url 'modificar_productos' e.idproducto%}" role="button">Modificar</a></td>
+                                            <td ><a class="btn btn-danger border-dark" href="{% url 'eliminar_productos' e.idproducto%}" role="button">Eliminar</a></td>
                                             <!-- <td class="t-a"><button class="btn btn-del eliminar-btn" data-url="{% url 'eliminar_productos' e.idproducto%}">Eliminar</button></td> -->
                                         <!-- <td class="t-a"><a class="a-edit" href="">Modificar</a></td>
                                         <td class="t-a"><a class="a-del" href="">Eliminar</a></td> -->
