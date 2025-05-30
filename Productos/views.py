@@ -6,7 +6,7 @@ from .models import *
 
 def listar_productos(request):
     productos=Producto.objects.all()
-    return render(request,'listar.html', {'producto': productos})
+    return render(request,'listarprod.html', {'producto': productos})
 
 
 def agregar_productos(request):
@@ -20,7 +20,7 @@ def agregar_productos(request):
                 descripcion=form.cleaned_data['descripcion']
             )
             return redirect('listar_productos')
-    return render(request,'agregar.html',{'form':form})
+    return render(request,'agregarprod.html',{'form':form})
 
 def modificar_productos(request,idproducto):
     producto=get_object_or_404(Producto, idproducto=idproducto)
@@ -37,11 +37,11 @@ def modificar_productos(request,idproducto):
             producto.descripcion=form.cleaned_data['descripcion']
             producto.save()
             return redirect('listar_productos')
-    return render(request,'editar.html',{'form':form})
+    return render(request,'editarprod.html',{'form':form})
 
 def eliminar_productos(request,idproducto):
     producto=get_object_or_404(Producto,idproducto=idproducto)
     if request.method=='POST':
         producto.delete()
         return redirect('listar_productos')
-    return render(request,'eliminar.html',{'producto':producto})
+    return render(request,'eliminarprod.html',{'producto':producto})
