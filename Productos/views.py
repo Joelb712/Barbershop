@@ -1,14 +1,16 @@
 from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
 from .forms import ProductoForm
 from .models import *
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+@login_required
 def listar_productos(request):
     productos=Producto.objects.all()
     return render(request,'listarprod.html', {'producto': productos})
 
-
+@login_required
 def agregar_productos(request):
     form=ProductoForm()
     if request.method=='POST':
@@ -22,6 +24,7 @@ def agregar_productos(request):
             return redirect('listar_productos')
     return render(request,'agregarprod.html',{'form':form})
 
+@login_required
 def modificar_productos(request,idproducto):
     producto=get_object_or_404(Producto, idproducto=idproducto)
     form=ProductoForm(initial={
@@ -39,6 +42,7 @@ def modificar_productos(request,idproducto):
             return redirect('listar_productos')
     return render(request,'editarprod.html',{'form':form})
 
+@login_required
 def eliminar_productos(request,idproducto):
     producto=get_object_or_404(Producto,idproducto=idproducto)
     if request.method=='POST':

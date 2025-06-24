@@ -17,6 +17,9 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+LOGIN_URL = 'iniciosesion'  # usado por @login_required
+LOGIN_REDIRECT_URL = 'Inicio'  # a dónde redirige después del login
+LOGOUT_REDIRECT_URL = 'iniciosesion'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
